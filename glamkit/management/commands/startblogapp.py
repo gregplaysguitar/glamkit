@@ -1,7 +1,8 @@
 import os
 
-from django.core.management.base import copy_helper, CommandError, LabelCommand
+from django.core.management.base import CommandError, LabelCommand
 from django.utils.importlib import import_module
+from glamkit.management.base import copy_helper
 
 class Command(LabelCommand):
     help = "Creates a GLAMkit blogtools app directory structure for the given app name in the current directory."
