@@ -11,6 +11,7 @@ from optparse import make_option, OptionParser
 import django
 from django.core.exceptions import ImproperlyConfigured
 from django.core.management.color import color_style
+from django.core.management.base import CommandError
 
 def copy_helper(style, base, name, directory, other_name=''):
     """
@@ -18,11 +19,6 @@ def copy_helper(style, base, name, directory, other_name=''):
     layout template into the specified directory.
 
     """
-    print style
-    print base
-    print name
-    print directory
-    print other_name
     # style -- A color style object (see django.core.management.color).
     # base -- The GLAMkit toolkit which provides base classes for the app.
     # name -- The name of the application or project.
@@ -31,7 +27,7 @@ def copy_helper(style, base, name, directory, other_name=''):
     #               of the project.
     import re
     import shutil
-#     other = {'project': 'app', 'app': 'project'}[app_or_project]
+    other = 'project'
     if not re.search(r'^[_a-zA-Z]\w*$', name): # If it's not a valid directory name.
         # Provide a smart error message, depending on the error.
         if not re.search(r'^[_a-zA-Z]', name):
@@ -49,13 +45,8 @@ def copy_helper(style, base, name, directory, other_name=''):
     # django.__path__[0] because we don't know into which directory
     # django has been installed.
     template_dir = os.path.normpath(os.path.join(os.path.abspath(os.path.dirname(__file__)), 'app_templates', base))
-    print template_dir
 
     for d, subdirs, files in os.walk(template_dir):
-        print d
-        print subdirs
-        print files
-        print "------"
         relative_dir = d[len(template_dir)+1:].replace('%s_name' % base, name)
         if relative_dir:
             os.mkdir(os.path.join(top_dir, relative_dir))
@@ -68,10 +59,10 @@ def copy_helper(style, base, name, directory, other_name=''):
                 # breakages.
                 continue
             path_old = os.path.join(d, f)
-            path_new = os.path.join(top_dir, relative_dir, f.replace('%s_name' % app_or_project, name))
+            path_new = os.path.join(top_dir, relative_dir, f.replace('%s_name' % base, name))
             fp_old = open(path_old, 'r')
             fp_new = open(path_new, 'w')
-            fp_new.write(fp_old.read().replace('{{ %s_name }}' % app_or_project, name).replace('{{ %s_name }}' % other, other_name))
+            fp_new.write(fp_old.read().replace('{{ %s_name }}' % base, name).replace('{{ %s_name }}' % other, other_name))
             fp_old.close()
             fp_new.close()
             try:
