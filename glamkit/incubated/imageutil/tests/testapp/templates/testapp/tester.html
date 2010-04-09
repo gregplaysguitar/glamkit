@@ -1,0 +1,16 @@
+{% load imagehighlight %}
+<html>
+
+<head>
+	
+<title>Just a test</title>
+
+</head>
+
+<body>
+	{% for object in owis %}
+		<p><img src='{% highlight object.image %}' alt='a cropped image' /></p>
+		<p><img src='{% highlight object.another_image %}' alt='a cropped image' /></p>
+	{% endfor %}
+</body>
+</html>

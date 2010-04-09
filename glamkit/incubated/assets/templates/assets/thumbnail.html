@@ -1,0 +1,4 @@
+{% load imagemagick %}
+
+
+<img src='{{ image_file|convert:"-resize 120x120 -strip -quality 50"}}' />

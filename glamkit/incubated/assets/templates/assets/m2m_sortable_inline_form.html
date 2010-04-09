@@ -1,0 +1,5 @@
+{% load imagemagick %}
+
+<li class="image" visualmedia_id="{{ obj.id }}" style="background-image: url('{{MEDIA_URL}}{{ obj.image.image.name|convert:"-resize 120 -strip -quality 50"}}' )">
+    <span class="title">{{ obj.name }}</span>
+</li>

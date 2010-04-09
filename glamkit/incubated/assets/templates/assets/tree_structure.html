@@ -1,0 +1,63 @@
+{% extends "admin/base_site.html" %}
+
+{% block javascripts %}
+{{ block.super }}
+{{ media }}
+<script type="text/javascript">
+$(function(){
+    var moved_nodes = [];
+    $("#tree_container").tree({
+        types: {
+            "default" : {
+                clickable   : false,
+                renameable  : false,
+                deletable   : false,
+                creatable   : false,
+                draggable   : true,
+                max_children    : -1,
+                max_depth   : -1,
+                valid_children  : "all",
+
+                icon : {
+                    image : false,
+                    position : false
+                }
+            }
+        },
+        ui: {
+            theme_name: "checkbox"
+        },
+        callback: {
+            onmove: function(node, ref_node, type){
+                moved_nodes.push({node: $(node).attr("id"), rel: type, relative_to: $(ref_node).attr("id")});
+            }
+        }
+    });
+    
+    $("#yarr_button").click(function(){
+        $("#moved_nodes").val(JSON.stringify(moved_nodes));
+    });
+});
+</script>
+{% endblock javascripts %}
+
+{% block content %}
+    <h2>Roots:</h2>
+    <div id="tree_container">
+        <ul>
+        {% for root in roots %}
+            {{ root.to_li|safe }}
+        {% endfor %}
+        </ul>
+    </div>
+
+    <div id="submit_buttons" style="margin-top: 100px;">
+        <form method="POST">
+            {% csrf_token %}
+            <input id="moved_nodes" type="hidden" value="" name="moved_nodes">
+            <input id="yarr_button" type="submit" value="Yarr" />
+            <input type="submit" value="Cancel" name="cancel"/>
+        </form>
+    </div>
+{% endblock content %}
+

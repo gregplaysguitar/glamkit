@@ -1,0 +1,85 @@
+/* M2M sortable widget */
+#m2m_sortable{
+    width: 845px;
+    height: 500px;
+}
+    .column{
+        float: left;
+        height: 100%;
+    }
+
+    .content_column{
+/*         background-color: yellow; */
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+    
+        .content_column ul{
+            padding: 3px;
+            margin: 0px;
+            list-style-type:none;
+        }
+        
+        .content_column li{
+            min-height: 140px;
+            min-width: 125px;
+            background-repeat:no-repeat;
+            background-position: 3px 20px;
+            
+         }
+
+    #leftcolumn{
+        width: 480px;
+    }
+        #leftcolumn .image{
+            float: left;
+            padding: 5px 5px 5px 5px;
+            margin: 5px 5px 5px 5px;
+/*             background-color: purple; */
+            border: 1px solid black;
+        }
+        
+        #leftcolumn li{
+            width: 130px;
+        }
+
+    #middlecolumn{
+        width: 20px;
+        margin-top: 200px;
+        text-align: center;
+/*         background-color: red;  */
+    }
+        #middlecolumn img{
+            cursor: pointer;
+        }
+
+    #rightcolumn{
+        width: 345px;
+    }
+        #rightcolumn .title{
+            display: block;
+        }
+        
+        #rightcolumn ul{
+            min-height:100%;
+        }
+        
+        #rightcolumn .image{
+            display: block;
+            margin: 5px 10px 5px 10px;
+            border: 1px solid black;
+            width: 95%;
+            text-align: left;
+        }
+
+
+
+.clear{
+    clear: both;
+}
+
+.selected{
+    background-color:#336699;
+    color:white;
+}
+

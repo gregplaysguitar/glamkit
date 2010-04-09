@@ -1,0 +1,99 @@
+{% load adminmedia %}
+
+<script type="text/javascript">
+    function createHiddenFields(){
+        var txt = "";
+        var i = 0;
+        var name = "{{ qs_name }}-";
+        $("#rightcolumn .image").each(function(){
+            var id = $(this).attr("visualmedia_id");
+            txt += "<input type='hidden' name='" + name + i + "-media' value='" + id + "' />";
+            txt += "<input type='hidden' name='" + name  + i + "-rank' value='" + i + "' />";
+            i++;
+        });
+        txt = "<input type='hidden' name='" + name +  "MAX_NUM_FORMS' value='0' />" + txt;
+        txt = "<input type='hidden' name='" + name +  "TOTAL_FORMS' value='" + i + "' />" + txt;
+        txt = "<input type='hidden' name='" + name + "INITIAL_FORMS' value='0' />" + txt;
+        $("#hidden_data").html(txt);
+    }
+    
+    $(document).ready(
+    function(){
+        $("#hidden_data_js_disabled").empty(); 
+        $("#m2m_sortable ul, #m2m_sortable li").disableSelection();
+        $("#sortable").sortable({
+            distance: 6,
+            update: function(){
+                createHiddenFields();
+            }
+        });
+        $("#leftcolumn .image").draggable({
+            distance: 6,
+            connectToSortable: "#sortable",
+            helper: "clone",
+            revert: "invalid"
+            });
+        $(".image").live("click", function(){
+            $(this).toggleClass("selected");
+        });
+        
+        $("#m2m_add").bind("click", function(){
+            $("#leftcolumn .selected").each(function(){
+                $(this).removeClass("selected").clone().appendTo("#sortable");
+            });
+            createHiddenFields();
+        });
+        
+        $("#m2m_remove").bind("click", function(){
+            $("#rightcolumn .selected").remove();
+            createHiddenFields();
+        });
+        
+        createHiddenFields();
+    });
+</script>
+<style TYPE="text/css">
+<!--
+  @import url(/media/assets/css/m2m_sortable.css);
+-->
+</style>
+
+<fieldset class="module aligned">
+    <div id="m2m_sortable"> 
+        <div id="leftcolumn" class="column content_column">
+            <ul>
+                {% for obj in inline_admin_formsets.0.formset.query %}
+                     {% include "assets/m2m_sortable_inline_form.html" %} 
+                {% endfor %}
+            </ul>
+        </div>
+        <div id="middlecolumn" class="column">
+            <img id="m2m_add" src="/media/admin/img/admin/selector-add.gif" />
+            <img id="m2m_remove" src="/media/admin/img/admin/selector-remove.gif" />
+        </div>
+        <div id="rightcolumn" class="column content_column">
+            <ul id="sortable">
+            {% for obj in inline_admin_formsets.0.formset.entered_data %} 
+                {% with obj.media as obj %}
+                    {% include "assets/m2m_sortable_inline_form.html" %}
+                {% endwith %}
+            {% endfor %}
+            
+            {% for obj in attachments %}
+                {% with obj.media as obj %}
+                    {% include "assets/m2m_sortable_inline_form.html" %}
+                {% endwith %}
+            {% endfor %}
+            </ul>
+
+        </div>
+        <div class="clear"></div>
+        <div id="hidden_data">
+            <div id="hidden_data_js_disabled">
+                <input type='hidden' name='{{ qs_name }}-MAX_NUM_FORMS' value='0' />
+                <input type='hidden' name='{{ qs_name }}-TOTAL_FORMS' value='0' />
+                <input type='hidden' name='{{ qs_name }}-INITIAL_FORMS' value='0' />
+            </div>
+        </div>
+    </div>
+</fieldset>

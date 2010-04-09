@@ -1,0 +1,1 @@
+TEST_UPLOAD_DIRECTORY = 'imageutil_test_upload_directory'
