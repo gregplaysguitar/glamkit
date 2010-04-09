@@ -18,6 +18,11 @@ def copy_helper(style, base, name, directory, other_name=''):
     layout template into the specified directory.
 
     """
+    print style
+    print base
+    print name
+    print directory
+    print other_name
     # style -- A color style object (see django.core.management.color).
     # base -- The GLAMkit toolkit which provides base classes for the app.
     # name -- The name of the application or project.
@@ -43,9 +48,14 @@ def copy_helper(style, base, name, directory, other_name=''):
     # Determine where the app or project templates are. Use
     # django.__path__[0] because we don't know into which directory
     # django has been installed.
-    template_dir = os.path.normpath(os.path.join('../', 'app_templates', base))
+    template_dir = os.path.normpath(os.path.join(os.path.abspath(os.path.dirname(__file__)), 'app_templates', base))
+    print template_dir
 
     for d, subdirs, files in os.walk(template_dir):
+        print d
+        print subdirs
+        print files
+        print "------"
         relative_dir = d[len(template_dir)+1:].replace('%s_name' % base, name)
         if relative_dir:
             os.mkdir(os.path.join(top_dir, relative_dir))

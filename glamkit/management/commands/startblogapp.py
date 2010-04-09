@@ -17,6 +17,7 @@ class Command(LabelCommand):
     def handle_label(self, app_name, directory=None, **options):
         if directory is None:
             directory = os.getcwd()
+            
 
         # Determine the project_name by using the basename of directory,
         # which should be the full path of the project directory (or the
@@ -34,4 +35,4 @@ class Command(LabelCommand):
         else:
             raise CommandError("%r conflicts with the name of an existing Python module and cannot be used as an app name. Please try another name." % app_name)
 
-        copy_helper(self.style, 'app', app_name, directory, project_name)
+        copy_helper(self.style, 'blog', app_name, directory, project_name)
