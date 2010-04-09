@@ -1,0 +1,121 @@
+Events
+======
+The philosophy behind GLAMkit events
+------------------------------------
+Most GLAM institutions have a fairly complex event calendar that contains a mix of one-off events (eg. exhibition openings, lectures etc.), as well as recurring events (eg. opening and closing times, tours, classes etc.). You often want to display events in categories (eg. Kid's events, Films etc.). They often belong to event programs, or seasons
+
+
+
+What does it do?
+----------------
+
+GLAMkit-events offers a way of working with and displaying complex public event schedules. It deals with:
+
+# one-off events
+# recurring events (with quite complex recursion rules).
+
+Concepts
+--------
+Events, Occurrences, and Rules
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ To give maximum power and flexibility, GLAMkit-events draws a distinction between Events and Occurrences. The best way to understand the difference is to use an example. Say you have a museum that has a guided tour of the widgets department every weekday except Fridays
+
+Periods
+Recursion Rules
+
+Installation
+------------
+
+
+Configuration
+-------------
+
+Smartlinks settings variables
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Smartlinks hooks
+^^^^^^^^^^^^^^^^
+        
+        
+Options syntax
+^^^^^^^^^^^^^^
+Usually, all we want from a smart link is to search a given model using given search type, so defining a custom hook seems like an overkill. In that case, smartlinks extra options are helpful. "search_field" specifies what field should be searched and how it should be searched, disambiguator, obviously, does the same thing for the disambiguator.
+
+Usage
+-----
+
+
+Django-schedule has just been released, supporting recurring events. Doing this required a paradigm switch. In this post I will describe the paradigm switch as well as explaining some features.
+Events and Occurrences
+Periods
+Rules
+Relations
+Events and Occurrences
+The new idea is to think of Events as a thing that a person would like to track, and an Occurrence as a instance of an event with a specific time and date. It works best if we think about it with an example. You have a 'Weekly Staff Meeting', this is an Event. Its a meeting that happens every week. Now 'Tuesday's Staff Meeting' is an Occurrence. It is a specific instance of the Event 'Weekly Staff Meeting'. So now lets look at how this works with the code.
+>>> user = User.objects.get(username='thauber')
+>>> start = datetime.datetime(2008,1,1,14,0)
+>>> end = datetime.datetime(2008,1,1,15,0)
+>>> rule = Rule.objects.get(name = "Weekly")
+>>> event = Event(title = 'Staff Meeting',
+...           start = start,
+...           end = end,
+...           rule = rule,
+...           description = "description")
+>>> event.create_relation(user)
+What we just created here was an event called "Staff Meeting." Don't worry about the create_relation line we will deal with that in Relations. Now we can worry about getting the Occurrences. Lets say that you want all occurrences of that event from today to a week from today.
+>>> start = datetime.datetime.now()
+>>> end = start + datetime.timedelta(days=7)
+>>> event.get_occurrence(start, end)
+This would return all of the occurrences of this event between start and end.
+Periods
+So now you have a list of events, and you would like all of the occurrences for that list. You can do this with the Period class.
+>>> events = Event.objects.get_for_object(user)
+>>> period = Period(events, start, end)
+>>> period.get_occurrences()
+If you are wondering why there is a class for this there are several reasons.
+1) It is useful to know which events start in this period, end in this period, or are just continued in this period. To deal with this there is a function, get_occurrence_partials, which returns what I like to call Occurrence Partials. Meaning Occurrences relevant to to a discrete period of time. Each element in the returned list is a dictionary {'event': event, 'class': 0} the classes are as follows:
+0: The event begins in this period
+1: The event begins and ends in this period
+2: The event doesn't begin or end in this period, but it exists in this period (AKA it continues during this period)
+3: The event ends during this period
+2) It can be subclassed so that special functionality can be added to special periods. Some subclasses that are included out-of-the-box are Month, Week, and Day. These subclasses have some specific functionality that you may find helpful, for example Month has get_weeks, which returns the Week periods for that specific Month period. Month, Week, and Day are all initialized by a date or a datetime object.
+>>> date = datetime.datetime(2008,5,20)
+>>> month = Month(date)
+>>> month.start
+datetime.datetime(2008,5,1,0,0)
+>>> month.end
+datetime.datetime(2008,6,1,0,0)
+Notice that the end of a period is not inclusive in the period.
+To see more information on the Period class you should view the source.
+Rules
+Rules are how you define the recurrence pattern of an Event. This uses the rrule in the dateutil module (not included with python). For more information on rrule you should see the documentation. Rule is a model so it can be created through the admin interface. As of now the fields are
+Name
+The name of the recurrence pattern (ie Weekly, Every other Month)
+Description
+A more verbose definition of the recurrence pattern.
+Frequency
+Defines the frequency set for the rrule. Must be YEARLY, MONTHLY, WEEKLY, DAILY, HOURLY, MINUTELY, SECONDLY.
+Params
+This field holds the params that allow you to customize the rrule. It is key value pairs seperated by semi-colons(;) the key value pairs are seperated by colons(:). The value must be integers, or list of integers. An example would be count:2;byweekday:0,1,2; (see source for more help).
+Eventually the admin will be easier to work with for this model, and it will come with some builtin Rules, like Weekly, Monthly, Yearly, Every Weekday, etc.
+Relations
+There is a built in relationship table for relating events to generic objects. This also works with calendars. You do not need to worry about the relationship table as it all happens behind the scene. Lets say you want to relate a calendar to a Group, which represents a group of users. This is really simple to do.
+>>> group = Group.objects.get(name = "Pythonistas")
+>>> cal = Calendar.objects.get(name = "Pythonistas' Calendar")
+>>> cal.create_relation(group)
+# Now to get that calendar
+>>> Calendar.objects.get_calendars_for_object(group)
+Both Calendar and Event have create_relation functions. If you know that there should only be one Calendar you can use get_calendar_for_object. It will return one Calendar or raise Calendar.DoesNotExist. Or if you only want there to be one calendar, but you don't know if there is one you can use get_or_create_calendar.
+>>> Calendar.objects.get_or_create_calendar(group, name = "Pythonistas' Calendar")
+As you can see there is an optional keyword name. If the Calendar needs to be created it will get the name name.
+Conclusion
+There is some work that still needs to be done. I would like upgraded forms, templatetags, and I am always looking for more features to be implemented. If you have an comments you can let us know at the Django-schedule page.
+A special thanks to Yann Malet for his help getting event recursion working
+UPDATE fixed some typos, see yml's and Guenter's post below.
+
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+* :ref:`glossary`

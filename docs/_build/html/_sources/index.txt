@@ -1,0 +1,38 @@
+.. GLAMkit documentation master file
+
+===================================
+Welcome to GLAMkit's documentation!
+===================================
+
+Introduction
+============
+
+    * :doc:`Installing GLAMkit <install>`
+
+Content Apps
+============
+
+    * :doc:`Assets <assets/index>`
+    * :doc:`Events <eventtools/index>`
+    * :doc:`Blog tools <blogtools/index>`
+    * :doc:`Comment tools <commenttools/index>`
+    
+Glamkit Core
+============
+
+Utility Apps
+============
+
+    * :doc:`Mediahash <mediahash/index>`
+    * :doc:`Smartlinks <smartlinks/index>`
+    * :doc:`Stopspam <stopspam/index>`
+    
+    example
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+

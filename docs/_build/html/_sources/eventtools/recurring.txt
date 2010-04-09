@@ -1,0 +1,52 @@
+=============================
+Working with recurring events
+=============================
+
+Recurring events require two additional concepts:
+
+
+
+Occurrence models
+-----------------
+
+Every 
+
+Rules are how you define the recurrence pattern of an Event. This uses the rrule in the dateutil module (not included with python). For more information on rrule you should see the documentation. Rule is a model so it can be created through the admin interface. As of now the fields are
+Name
+The name of the recurrence pattern (ie Weekly, Every other Month)
+Description
+A more verbose definition of the recurrence pattern.
+Frequency
+Defines the frequency set for the rrule. Must be YEARLY, MONTHLY, WEEKLY, DAILY, HOURLY, MINUTELY, SECONDLY.
+Params
+This field holds the params that allow you to customize the rrule. It is key value pairs seperated by semi-colons(;) the key value pairs are seperated by colons(:). The value must be integers, or list of integers. An example would be count:2;byweekday:0,1,2; (see source for more help).
+Eventually the admin will be easier to work with for this model, and it will come with some builtin Rules, like Weekly, Monthly, Yearly, Every Weekday, etc.
+
+
+
+What is a Rule?
+---------------
+
+A rule defines how and event will recur.  As of right now, there are no rules
+included with the app, so you will have to create your own. Doing this is somewhat straight forward 
+
+Accessing Occurrences with an Event
+-----------------------------------
+
+Because some Event can recur indefinitely, you can not have a function like,
+``event.get_all_occurrences()``, because that would be an infinite list.  So, there are two ways of getting occurrences given an event.
+
+``get_occurrences(start, end)``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This gives you a list of all occurrences that occur inclusively after start and exclusively before end.  When we say occur, that means that they exist at all between start and end. If occurrence ends 10 seconds after ``start`` then it will be in the list, and if an occurrence starts 10 seconds before ``end`` then it will also be in the list.
+
+``occurrences_after(after)``
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+This method produces a generator that generates events inclusively after the given datetime ``after``.  If no date is given then it uses now.
+
+Accessing Occurrences from lists of Events
+------------------------------------------
+
+You are often going to have a list of events and want to get occurrences from them.  To do this you can use Periods, and EventListManagers.

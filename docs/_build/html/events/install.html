@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Installation &mdash; GLAMkit v0.1 documentation</title>
+    <link rel="stylesheet" href="../_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.1',
+        COLLAPSE_MODINDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="GLAMkit v0.1 documentation" href="../index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li><a href="../index.html">GLAMkit v0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <h3><a href="../index.html">Table Of Contents</a></h3>
+            <ul>
+<li><a class="reference external" href="">Installation</a><ul>
+<li><a class="reference external" href="#installing-the-latest-stable-version">Installing the Latest Stable Version</a></li>
+<li><a class="reference external" href="#insalling-the-latest-development-version">Insalling the Latest Development Version</a></li>
+</ul>
+</li>
+<li><a class="reference external" href="#configuration">Configuration</a></li>
+</ul>
+
+            <h3>This Page</h3>
+            <ul class="this-page-menu">
+              <li><a href="../_sources/events/install.txt"
+                     rel="nofollow">Show Source</a></li>
+            </ul>
+          <div id="searchbox" style="display: none">
+            <h3>Quick search</h3>
+              <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" size="18" />
+                <input type="submit" value="Go" />
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+              <p class="searchtip" style="font-size: 90%">
+              Enter search terms or a module, class or function name.
+              </p>
+          </div>
+          <script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="installation">
+<span id="ref-install"></span><h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<p>The project is available through Tony Hauber&#8217;s <a class="reference external" href="http://github.com/thauber/django-schedule/tree">Github Repository</a>. Currently, there&#8217;s no 1.0 release, but the current release candidate is considered stable.</p>
+<div class="section" id="installing-the-latest-stable-version">
+<h2>Installing the Latest Stable Version<a class="headerlink" href="#installing-the-latest-stable-version" title="Permalink to this headline">¶</a></h2>
+<p>The latest stable version is currently <a class="reference external" href="http://github.com/thauber/django-schedule/tree/v1.0-rc1">v1.0-rc1</a>. It can be installed via <a class="reference external" href="http://pip.openplans.org">pip</a> with:</p>
+<blockquote>
+pip install -e get+get://github.com/thauber/django-schedule.git&#64;v1.0-rc1#egg=schedule</blockquote>
+</div>
+<div class="section" id="insalling-the-latest-development-version">
+<h2>Insalling the Latest Development Version<a class="headerlink" href="#insalling-the-latest-development-version" title="Permalink to this headline">¶</a></h2>
+<p>For those interested in living on the edge, the github repo can be cloaned via:</p>
+<blockquote>
+git clone <a class="reference external" href="mailto:git&#37;&#52;&#48;github&#46;com/thauber/django-schedule&#46;git">git<span>&#64;</span>github<span>&#46;</span>com/thauber/django-schedule<span>&#46;</span>git</a></blockquote>
+</div>
+</div>
+<div class="section" id="configuration">
+<span id="ref-configure"></span><h1>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic simple">
+<li>Add <tt class="docutils literal"><span class="pre">schedule</span></tt> to your <tt class="docutils literal"><span class="pre">INSTALLED_APPS</span></tt></li>
+<li>Add <tt class="docutils literal"><span class="pre">(r'^schedule/',</span> <span class="pre">include('schedule.urls')),</span></tt> to your urls.py (changing <tt class="docutils literal"><span class="pre">r`^schedule/'</span></tt> to whatever url pattern you&#8217;d like django-schedule to live at)</li>
+<li>Resync your database <tt class="docutils literal"><span class="pre">./manage.py</span> <span class="pre">syncdb</span></tt></li>
+</ol>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li><a href="../index.html">GLAMkit v0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+      &copy; Copyright 2010, Thomas Ashelford.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 0.6.3.
+    </div>
+  </body>
+</html>
