@@ -15,8 +15,8 @@ class Command(LabelCommand):
     can_import_settings = False
 
     option_list = BaseCommand.option_list + (
-        make_option('--blog', '-b', dest='base', action="store_const", const='blog', help='Creates an app using GLAMkit blogtools'),
-        make_option('--events', '-e', dest='base', action="store_const", const='event', help='Creates an app using GLAMkit eventtools'),
+        make_option('--blog', '-b', dest='base', action="store_const", const='blogtools', help='Creates an app using GLAMkit blogtools'),
+        make_option('--events', '-e', dest='base', action="store_const", const='eventtools', help='Creates an app using GLAMkit eventtools'),
     )
 
     def handle_label(self, app_name, directory=None, **options):
@@ -42,5 +42,10 @@ class Command(LabelCommand):
             
         if base == None:
             raise CommandError("You must set a flag to specify the type of GLAMkit app you want")
+
+        try:
+            import_module(app_name)
+        except ImportError:
+            raise CommandError("%(app_type)s was not found in settings.INSTALLED_APPS. %(app_name)r requires %(app_type)s to be installed" % {'app_name': app_name, 'app_type': base})
 
         copy_helper(self.style, base, app_name, directory, project_name)
