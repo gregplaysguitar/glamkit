@@ -5,7 +5,23 @@ Installing GLAMkit
 .. seealso::
 
     Django `Quick install guide <http://docs.djangoproject.com/en/1.1/intro/install/>`_.
+    
+Recommended techniques
+----------------------
+All GLAMkit components are Django apps distributed as standard Python packages. You can install them using any of common python package installation techniques. However, there are two approaches we particularly recommend:
 
+Using virtualenv and pip 
+^^^^^^^^^^^^^^^^^^^^^^^^
+This is probably the way to go if you simply want to **use** GLAMkit to develop your website.
+    
+
+Using git submodules
+^^^^^^^^^^^^^^^^^^^^
+This is the recommended approach if you want to **modify** (and potentially **contribute to**) GLAMkit.
+
+.. todo::
+    
+    Explain how to submit github forks for merging into GLAMkit.
 
 Indices and tables
 ==================

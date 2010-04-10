@@ -1,6 +1,6 @@
-================
-A Quick Overview
-================
+=======================
+GLAMkit-events Overview
+=======================
 
 Different institutions have event calendars of differing complexity. GLAMkit events attempts to cover all the possible scenarios. Before developing with GLAMkit events, you should spend some time :doc:`determining what sort of schedule structure you need to model </eventtools/structures>`.
 

@@ -1,0 +1,7 @@
+================
+What is GLAMkit?
+================
+
+GLAMkit is a free, open source Web framework specifically for the GLAM (Galleries, Libraries, Archives and Museums) sector. It’s based on the leading-edge Web framework `Django <http://djangoproject.com/>`_, and will eventually have out-of-the-box support for public events, exhibitions, visitor info, social media, and hooks for integrating collections, ecommerce, ticketing, and so on. We're developing with audience experience with mind, so GLAMkit does the things that 90% of cultural institution sites need to do, and leaves web developers to concentrate on the things that they would rather control themselves. Think `Drupal <http://drupal.org/>`_, but easier, with GLAM-specific applications, more front-end flexibility, and much better integration with existing databases.
+
+GLAMkit is owned by the non-profit GLAMkit Foundation, and has arisen from the work of the `Interaction Consortium <http://interaction.net.au/>`_, an interaction design and Web development company based in Sydney, Australia, and two of their clients, the `National Film and Sound Archive <http://nfsa.gov.au/>`_ and the `Art Gallery of New South Wales <http://artgallery.nsw.gov.au>`_, both of whom have contributed substantial amounts of the source code for their forthcoming site redesigns to the project.

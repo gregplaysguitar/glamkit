@@ -1,0 +1,38 @@
+GLAMkit-blogtools
+=================
+
+A set of base classes and mixins that make it quick and easy to build a custom blog application in Django.
+
+The philosophy behind GLAMkit blogtools
+---------------------------------------
+
+Most GLAM institutions have a fairly complex event calendar that contains a mix of one-off events (eg. exhibition openings, lectures etc.), as well as recurring events (eg. opening and closing times, tours, classes etc.). You often want to display events in categories (eg. Kid's events, Films etc.). They often belong to event programs, or seasons
+
+
+
+What does it do?
+----------------
+
+GLAMkit-events offers a way of working with and displaying complex public event schedules. It deals with:
+
+# one-off events
+# recurring events (with quite complex recursion rules).
+
+Concepts
+--------
+Events, Occurrences, and Rules
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ To give maximum power and flexibility, GLAMkit-events draws a distinction between Events and Occurrences. The best way to understand the difference is to use an example. Say you have a museum that has a guided tour of the widgets department every weekday except Fridays
+
+Periods
+Recursion Rules
+
+Installation
+------------
+
+
+Configuration
+-------------
+
+Smartlinks settings variables
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

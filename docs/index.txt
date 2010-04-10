@@ -6,24 +6,28 @@ Welcome to GLAMkit's documentation!
 
 Introduction
 ============
-
+    * :doc:`What is GLAMkit? <about>`
+    * :doc:`Try the demo <demo/index>`
     * :doc:`Installing GLAMkit <install>`
+    * :doc:`The GLAMkit roadmap <roadmap>`
 
-Content Apps
-============
-
-    * :doc:`Assets <assets/index>`
-    * :doc:`Events <eventtools/index>`
-    * :doc:`Blog tools <blogtools/index>`
-    * :doc:`Comment tools <commenttools/index>`
-    
 Glamkit Core
 ============
 
-Utility Apps
-============
+    * :ref:`manage.py commands <ref-commands>`
 
-    * :doc:`Mediahash <mediahash/index>`
+GLAMkit Content Apps
+====================
+
+    * :doc:`Event tools <eventtools/index>`
+    * :doc:`Blog tools <blogtools/index>`
+    * :doc:`Comment tools <commenttools/index>`
+    
+
+Glamkit Utility Apps
+====================
+
+    * :doc:`Mediahash <performancetools/index>`
     * :doc:`Smartlinks <smartlinks/index>`
     * :doc:`Stopspam <stopspam/index>`
     

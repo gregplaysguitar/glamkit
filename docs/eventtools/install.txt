@@ -12,7 +12,7 @@ The project is available through `Github <http://github.com/glamkit/glamkit-even
 Configuration
 =============
 
-1. Add ``events`` to your ``INSTALLED_APPS``
+1. Add ``eventtools`` to your ``INSTALLED_APPS``
 
 2. Add ``(r'^events/', include('events.urls')),`` to your urls.py (changing ``r`^events/'`` to whatever url pattern you'd like glamkit-events to live at)
 
