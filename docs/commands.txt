@@ -7,3 +7,8 @@ GLAMkit manage.py commands
 .. seealso::
 
     Django `Quick django-admin.py and manage.py <http://docs.djangoproject.com/en/dev/ref/django-admin/>`_ docs.
+    
+.. code-block:: bash
+
+    manage.py startglamkitapp [options] <appname>
+
