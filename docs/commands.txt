@@ -12,3 +12,17 @@ GLAMkit manage.py commands
 
     manage.py startglamkitapp [options] <appname>
 
+Creates a template GLAMkit app of the type specified by the options.
+
+Options are:
+
+    ``--blog`` or ``-b`` creates an app using :doc:`blogtools/index`
+    
+    ``--events`` or ``-e`` creates an app using :doc:`eventtools/index`
+    
+The template app created is a functional but minimal app using the specified GLAMkit tool set (similar to the skeletal app created by the Django startapp command - only with a little more flesh on the bones!)
+
+Example usage::
+
+    manage.py startglamkitapp --blog my_blog
+
