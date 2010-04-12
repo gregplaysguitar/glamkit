@@ -147,7 +147,7 @@ Required Arguments
 from here you need a way to distinguish the occurrence and that involves
 
 ``occurrence_id``
-    if its persisted
+    if its exceptional
 
 **or** it requires a distinguishing datetime as designated by the keywords below. This should designate the original start date of the occurrence that you wish to access. Using ``get_absolute_url`` from the Occurrence model will help you standardize this.
 
@@ -198,7 +198,7 @@ Required Arguments
 from here you need a way to distinguish the occurrence and that involves
 
 ``occurrence_id``
-    the id of the occurrence if its persisted
+    the id of the occurrence if its exceptional
 
 **or** it requires a distinguishing datetime as designated by the keywords below. This should designate the original start date of the occurrence that you wish to access. Using ``get_edit_url`` from the Occurrence model will help you standardize this.
 
@@ -232,7 +232,7 @@ Context Variables
 cancel_occurrence
 =================
 
-This view is used to cancel and occurrence. It is worth noting that canceling an occurrence doesn't stop it from being in occurrence lists or being persisted, it just changes the ``cancelled`` flag on the instance. It is import to check this flag when listing occurrences.
+This view is used to cancel an occurrence. It is worth noting that canceling an occurrence doesn't stop it from being in occurrence lists or being 'exceptional', it just changes the ``cancelled`` flag on the instance. It is import to check this flag when listing occurrences.
 
 Also if this view is requested via POST, it will cancel the event and redirect. If this view is accessed via a GET request it will display a confirmation page.
 
@@ -245,7 +245,7 @@ Required Arguments
 from here you need a way to distinguish the occurrence and that involves
 
 ``occurrence_id``
-    if its persisted
+    if its exceptional
 
 **or** it requires a distinguishing datetime as designated by the keywords below. This should designate the original start date of the occurrence that you wish to access. Using get_cancel_url from the Occurrence model will help you standardize this.
 
