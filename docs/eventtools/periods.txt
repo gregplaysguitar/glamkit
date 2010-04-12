@@ -3,11 +3,9 @@ Periods
 =======
 
 One of the goals of GLAMkit Events is to make occurrence generation and persistence easy.  To do this it creates simple classes for accessing these
-occurrences.  These are Periods.  Period is an object that is initiated with an iterable object of events, a start datetime, and an end datetime.
+occurrences.  These are called Periods. A Period is an object that is instantiated with an iterable object of events, a start datetime, and an end datetime.
 
-It is common to subclass Period for common periods of time.  Some of these already exist in the project.  Year, Month, Week, Day
-
-Expect more in the future: Hour, HalfHour
+It is common to subclass Period for common periods of time.  Some of these already exist in the project.  eg. Year, Month, Week, Day.
 
 Period Base Class
 -----------------
@@ -68,7 +66,7 @@ This method returns whether there are any occurrences in this period
 Year
 ----
 
-The year period is instaniated with a list of events and a date or datetime object. It will resemble the year in which that date exists. 
+The year period is instantiated with a list of events and a date or datetime object. It models the year in which that date exists. 
 
 >>> p = Year(events, datetime.datetime(2008,4,1))
 >>> p.start
@@ -80,12 +78,12 @@ datetime.datetime(2009, 1, 1, 0, 0)
 ``get_months()``
 ~~~~~~~~~~~~~~~~
 
-This function returns 12 Month objects which resemble the 12 months in the Year period.
+This function returns 12 Month objects which model the 12 months in the Year period.
 
 Month
 -----
 
-The Month period is instantiated with a list of events and a date or  datetime object.  It resembles the month that contains the date or datetime object that was passed in.
+The Month period is instantiated with a list of events and a date or  datetime object.  It models the month that contains the date or datetime object that was passed in.
 
 >>> p = Month(events, datetime.datetime(2008,4,4))
 >>> p.start
@@ -113,7 +111,7 @@ This method returns a specific day in a year given its day number.
 Week
 ----
 
-The Week period is instantiated with a list of events and a date or  datetime object.  It resembles the week that contains the date or datetime object that was passed in.
+The Week period is instantiated with a list of events and a date or datetime object. It resembles the week that contains the date or datetime object that was passed in.
 
 >>> p = Week(events, datetime.datetime(2008,4,1))
 >>> p.start
