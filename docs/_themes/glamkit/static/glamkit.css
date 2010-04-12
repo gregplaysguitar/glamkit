@@ -30,12 +30,11 @@ p.logo {
 div.document {
     background-color: #fff;
     text-align: left;
-    background-repeat: repeat-x;
+/*    background-repeat: repeat-x;*/
 }
 
 div.bodywrapper {
     margin: 0 240px 0 0;
-/*    border-right: 1px solid #ccc;*/
 }
 
 div.body {
@@ -232,11 +231,11 @@ hr {
 
 a tt {
     border: 0;
-    color: #8CC63F;
+    color: #867566;
 }
 
 a tt:hover {
-    color: #2491CF;
+    color: #8cc63f;
 }
 
 pre {
