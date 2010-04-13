@@ -4,7 +4,7 @@
 Welcome to GLAMkit!
 ===================
 
-GLAMkit is a framework for building websites for Galleries, Libraries, Archives and Museums (the GLAM sector). It's written in `Python<http://python.org>`, using the Django framework, and it's free and open-source.
+GLAMkit is a web framework for Galleries, Libraries, Archives and Museums (the GLAM sector). It's written in `Python <http://python.org>`_, using the `Django <http://djangoproject.com>`_ web framework, and it's free and open-source.
 
 Introduction
 ============
