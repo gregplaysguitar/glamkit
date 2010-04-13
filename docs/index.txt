@@ -1,8 +1,10 @@
 .. GLAMkit documentation master file
 
-===================================
-Welcome to GLAMkit's documentation!
-===================================
+===================
+Welcome to GLAMkit!
+===================
+
+GLAMkit is a web framework for Galleries, Libraries, Archives and Museums (the GLAM sector). It's written in `Python <http://python.org>`_, using the `Django <http://djangoproject.com>`_ web framework, and it's free and open-source.
 
 Introduction
 ============

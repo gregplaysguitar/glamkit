@@ -1,0 +1,16 @@
+{% extends "basic/layout.html" %}
+
+{% block header %}
+
+  {%- if logo %}
+            <p class="logo"><a href="{{ pathto(master_doc) }}">
+              <img class="logo" src="{{ pathto('_static/' + logo, 1) }}" alt="GLAMkit"/>
+            </a></p>
+  {%- endif %}
+{% endblock %}
+
+{% block sidebarlogo %}{% endblock %}
+
+{# put the sidebar before the body #}
+{% block sidebar1 %}{{ sidebar() }}{% endblock %}
+{% block sidebar2 %}{% endblock %}
