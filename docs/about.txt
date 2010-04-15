@@ -2,11 +2,17 @@
 What is GLAMkit?
 ================
 
-GLAMkit is a free, open source Web framework specifically for the GLAM (Galleries, Libraries, Archives and Museums) sector. It’s based on the leading-edge Web framework `Django <http://djangoproject.com/>`_, and will eventually have out-of-the-box support for public events, exhibitions, visitor info, social media, and hooks for integrating collections, ecommerce, ticketing, and so on. We're developing with audience experience with mind, so GLAMkit does the things that 90% of cultural institution sites need to do, and leaves web developers to concentrate on the things that they would rather control themselves. Think Drupal, but easier, with GLAM-specific applications, more front-end flexibility, and much better integration with existing databases.
+GLAMkit is a free, open source Web framework built on top of Django, specifically for the GLAM (Galleries, Libraries, Archives and Museums) sector. 
 
-GLAMkit provides tools, patterns and components for publishing events for the public and managing collections, wikis, blogs and static content in GLAM sites, whilst allowing the tools, patterns and components to be customised or replaced, both broadly and in the details.
+It's not just a grab bag of useful plug-and-play DJango apps (although it comes with a few of those), but rather a set of tools, patterns and Django base classes which can be extended to produce a bespoke CMS for your cultural institution.
 
-GLAMkit is owned by the non-profit GLAMkit Association, and has arisen from the work of the `Interaction Consortium <http://interaction.net.au/>`_, an interaction design and Web development company based in Sydney, Australia, and two of their clients, the `National Film and Sound Archive <http://nfsa.gov.au/>`_ and the `Art Gallery of New South Wales <http://artgallery.nsw.gov.au>`_.
+GLAMkit is currently in alpha development. At this stage of development, most of the code consists of generalised versions of site-specific code written for clients. This is similar to the way that Django itself started. We are still in the process of generalising existing code - so you can expect GLAMkit to grow very quickly over the next few weeks as we plunder our storehouse of GLAM-specific code.
+
+However, we should stress that it *is* alpha code. There are still significant holes in the functionality, but there are already several production-ready components that could save a lot of development time, particularly if you're already an experienced Django developer.
+
+-----------------
+
+GLAMkit is owned by the non-profit GLAMkit Association, and has arisen from the work of the `Interaction Consortium <http://interaction.net.au/>`_, an interaction design and Web development company based in Sydney, Australia, and two of their clients, the `National Film and Sound Archive <http://nfsa.gov.au/>`_ and the `Art Gallery of New South Wales <http://artgallery.nsw.gov.au>`_. It is released under the very liberal BSD license.
 
 Thanks to the staff of the Art Gallery of New South Wales and the staff of the National Film and Sound Agency for supporting work on GLAMkit and contributing ideas and code. Thanks to Brett Goulder, Sarah Champion and Duan Sebastian for their work on the forthcoming GLAMkit community site. Thanks to Iris Lockyer at the Interaction Consortium for editorial assistance.
 
