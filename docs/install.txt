@@ -13,15 +13,14 @@ All GLAMkit components are Django apps distributed as standard Python packages. 
 Using virtualenv and pip 
 ^^^^^^^^^^^^^^^^^^^^^^^^
 This is probably the way to go if you simply want to **use** GLAMkit to develop your website.
-    
+
+If you're not familiar with virtualenv and pip, the time you spend reading `these <http://lincolnloop.com/blog/2008/dec/7/simple-easy-deployment-fabric-and-virtualenv/>`_ and `two <http://www.doughellmann.com/articles/pythonmagazine/completely-different/2008-05-virtualenvwrapper/index.html`_ articles will be repaid many times.
 
 Using git submodules
 ^^^^^^^^^^^^^^^^^^^^
-This is the recommended approach if you want to **modify** (and potentially **contribute to**) GLAMkit.
-
-.. todo::
+This is the recommended approach if you want to **modify** (and potentially **contribute to**) GLAMkit. You can clone `our github repositories <http://github.com/glamkit>`_ or fork a repository into your own github account. 
     
-    Explain how to submit github forks for merging into GLAMkit.
+If you fork glamkit, and make changes that you think should be in the main GLAMkit, then let us know by submitting a `pull request <http://github.com/guides/pull-requests>`_ on github. For example, `Oktay Sancak <http://github.com/os>`_ has already submitted Turkish translations for GLAMkit this way. The core contributors will take a look and decide whether the change is appropriate. As the project grows, we'll introduce a process more in line with `Django's contribution process <http://docs.djangoproject.com/en/dev/internals/contributing/>`_.
 
 Indices and tables
 ==================

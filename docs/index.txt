@@ -10,9 +10,9 @@ It's not just a grab bag of useful plug-and-play Django apps (although it comes 
 
 The framework is made up of loosely-coupled :doc:`components <components>`, most of which can be be used a standalone apps, or as part of a larger GLAMkit ecosystem. Our loosely-coupled design approach makes it easy to integrate GLAMkit functionality into existing DJango sites.
 
-GLAMkit is currently in alpha development. At this stage of development, most of the code consists of generalised versions of site-specific code written for clients. This is similar to the way that Django itself started. We are still in the process of generalising existing code - so you can expect GLAMkit to grow very quickly over the next few weeks as we plunder our storehouse of GLAM-specific code.
+GLAMkit is currently in alpha development - sign up `here <http://groups.google.com/group/glamkit-announce>_` to receive announcements about progress. We are still in the process of generalising existing code - so you can expect GLAMkit to grow very quickly over the next few weeks as we plunder our storehouse of code, which represents years of experience and hundreds of hours designing and building GLAM-specific sites. We'd love you to join in on `Github <http://github.com/glamkit>_` or the `mailing list <http://http://groups.google.com/group/glamkit-developers>_`.
 
-However, we should stress that it *is* alpha code. There are still significant holes in the functionality, but there are already several production-ready components that could save a lot of development time, particularly if you're already an experienced Django developer.
+However, we should stress that it *is* alpha code. There are still some holes, but there are already several production-ready components that could save a lot of development time, particularly if you're already an experienced Django developer.
 
 Documentation
 =============
@@ -41,11 +41,11 @@ Glamkit Utility Apps
 
     * :doc:`Performance tools <performancetools/index>`
     * :doc:`Smartlinks <smartlinks/index>`
-    * :doc:`Stopspam <stopspam/index>`
-    
+    * :doc:`Stopspam <stopspam/index>` 
+   
 GLAMkit is owned by the non-profit GLAMkit Association, and has arisen from the work of the `Interaction Consortium <http://interaction.net.au/>`_, an interaction design and Web development company based in Sydney, Australia, and two of their clients, the National Film and Sound Archive and the Art Gallery of New South Wales. It is released under the very liberal BSD license.
 
-Thanks to the staff of the Art Gallery of New South Wales and the staff of the National Film and Sound Agency for supporting work on GLAMkit and contributing ideas and code. Thanks to Brett Goulder, Sarah Champion and Duan Sebastian for their work on the forthcoming GLAMkit community site.
+Thanks to the staff of the Art Gallery of New South Wales and the staff of the National Film and Sound Agency for supporting work on GLAMkit and contributing ideas and code.
     
 Indices and tables
 ==================
