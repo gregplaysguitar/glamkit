@@ -14,7 +14,7 @@ Using virtualenv and pip
 ^^^^^^^^^^^^^^^^^^^^^^^^
 This is probably the way to go if you simply want to **use** GLAMkit to develop your website.
 
-If you're not familiar with virtualenv and pip, the time you spend reading `these <http://lincolnloop.com/blog/2008/dec/7/simple-easy-deployment-fabric-and-virtualenv/>`_ and `two <http://www.doughellmann.com/articles/pythonmagazine/completely-different/2008-05-virtualenvwrapper/index.html`_ articles will be repaid many times.
+If you're not familiar with virtualenv and pip, the time you spend reading `these <http://lincolnloop.com/blog/2008/dec/7/simple-easy-deployment-fabric-and-virtualenv/>`_ `two <http://www.doughellmann.com/articles/pythonmagazine/completely-different/2008-05-virtualenvwrapper/index.html>`_ articles will be repaid many times.
 
 Using git submodules
 ^^^^^^^^^^^^^^^^^^^^
