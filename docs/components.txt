@@ -1,0 +1,27 @@
+==================
+GLAMkit Components
+==================
+
+Essentials
+----------
+
+glamkit
+^^^^^^^
+This is the 'core' application, which contains code elements that are used by multiple GLAMkit components, as well as commands that can be used to install and integrate GLAMkit components, as well as the documentation. Source: http://github.com/glamkit/glamkit
+
+glamkit-demo
+^^^^^^^^^^^^
+An example project that makes use of most of the features of the GLAMkit framework. This is a good starting point to explore the functionality. Source: http://github.com/glamkit/glamkit-blogtools
+
+Content App Tools
+-----------------
+
+glamkit-blogtools
+^^^^^^^^^^^^^^^^^
+
+glamkit-commenttools
+^^^^^^^^^^^^^^^^^^^^
+
+glamkit-eventtools
+^^^^^^^^^^^^^^^^^^
+

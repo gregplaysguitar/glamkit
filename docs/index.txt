@@ -4,22 +4,32 @@
 Welcome to GLAMkit
 ==================
 
-GLAMkit is a web framework for Galleries, Libraries, Archives and Museums (the GLAM sector). It's written in `Python <http://python.org>`_, using the `Django <http://djangoproject.com>`_ web framework. It's free and open-source.
+GLAMkit is a free, open source Web framework built on top of Django, specifically for the GLAM (Galleries, Libraries, Archives and Museums) sector. 
+
+It's not just a grab bag of useful plug-and-play Django apps (although it comes with a few of those), but rather a set of tools, patterns and Django base classes which can be extended to produce a bespoke CMS for your cultural institution.
+
+The framework is made up of loosely-coupled :doc:`components <components>`, most of which can be be used a standalone apps, or as part of a larger GLAMkit ecosystem. Our loosely-coupled design approach makes it easy to integrate GLAMkit functionality into existing DJango sites.
+
+GLAMkit is currently in alpha development. At this stage of development, most of the code consists of generalised versions of site-specific code written for clients. This is similar to the way that Django itself started. We are still in the process of generalising existing code - so you can expect GLAMkit to grow very quickly over the next few weeks as we plunder our storehouse of GLAM-specific code.
+
+However, we should stress that it *is* alpha code. There are still significant holes in the functionality, but there are already several production-ready components that could save a lot of development time, particularly if you're already an experienced Django developer.
+
+Documentation
+=============
 
 Introduction
-============
-    * :doc:`What is GLAMkit? <about>`
-    * :doc:`Try the demo <demo/index>`
+^^^^^^^^^^^^
+    * :doc:`GLAMkit components <components>`
     * :doc:`Installing GLAMkit <install>`
     * :doc:`The GLAMkit roadmap <roadmap>`
 
 Glamkit Core
-============
+^^^^^^^^^^^^
 
     * :ref:`manage.py commands <ref-commands>`
 
 GLAMkit Content Apps
-====================
+^^^^^^^^^^^^^^^^^^^^
 
     * :doc:`Event tools <eventtools/index>`
     * :doc:`Blog tools <blogtools/index>`
@@ -27,14 +37,16 @@ GLAMkit Content Apps
     
 
 Glamkit Utility Apps
-====================
+^^^^^^^^^^^^^^^^^^^^
 
     * :doc:`Performance tools <performancetools/index>`
     * :doc:`Smartlinks <smartlinks/index>`
     * :doc:`Stopspam <stopspam/index>`
     
-    example
+GLAMkit is owned by the non-profit GLAMkit Association, and has arisen from the work of the `Interaction Consortium <http://interaction.net.au/>`_, an interaction design and Web development company based in Sydney, Australia, and two of their clients, the National Film and Sound Archive and the Art Gallery of New South Wales. It is released under the very liberal BSD license.
 
+Thanks to the staff of the Art Gallery of New South Wales and the staff of the National Film and Sound Agency for supporting work on GLAMkit and contributing ideas and code. Thanks to Brett Goulder, Sarah Champion and Duan Sebastian for their work on the forthcoming GLAMkit community site.
+    
 Indices and tables
 ==================
 
