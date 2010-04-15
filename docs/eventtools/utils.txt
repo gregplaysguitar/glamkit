@@ -17,7 +17,7 @@ Creates a generator that produces the next occurrence inclusively after the date
 OccurrenceReplacer
 ------------------
 
-If you get more into the internals of glamkit-events, and decide to create your own method for producing occurrences, instead of using one of the public facing methods for this, you are going to want to replace the default generated occurrence with an exceptional one, if a exeptional occurence exists in the database.  To facilitate this in a standardized way you have the OccurrenceReplacer class.
+If you get more into the internals of glamkit-events, and decide to create your own method for producing occurrences, instead of using one of the public facing methods for this, you are going to want to replace the default generated occurrence with an exceptional one, if a exceptional occurence exists in the database.  To facilitate this in a standardized way you have the OccurrenceReplacer class.
 
 To instantiate it you give it the pool of exceptional occurrences you would like to check in.
 
