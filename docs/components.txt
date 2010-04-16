@@ -68,7 +68,7 @@ glamkit-stopspam
 ^^^^^^^^^^^^^^^^
 Hook `Akismet <http://akismet.com/>`_ into your commenting system. 
 
-`Source <http://github.com/glamkit/glamkit-performance>`_
+`Source <http://github.com/glamkit/glamkit-stopspam>`_
 
 
 
