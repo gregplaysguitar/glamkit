@@ -26,7 +26,7 @@ Content app tools
 
 glamkit-blogtools
 ^^^^^^^^^^^^^^^^^
-Awaiting input from JP.
+A tool for quickly creating customised blog apps.
 
 `Source <http://github.com/glamkit/glamkit-blogtools>`_ |
 :doc:`Documentation <blogtools/index>`
@@ -61,7 +61,7 @@ glamkit-performance
 ^^^^^^^^^^^^^^^^^^^
 Apps to make your website go faster. 
 
-`Source <http://github.com/glamkit/glamkit-performance`>_ |
+`Source <http://github.com/glamkit/glamkit-performance>`_ |
 :doc:`Documentation <performance/index>`
 
 glamkit-stopspam
@@ -76,13 +76,18 @@ Endorsed apps
 
 FeinCMS
 ^^^^^^^
+A page based CMS that can use incorporate GLAMkit content apps
+http://github.com/matthiask/feincms
 
 django-reversion
 ^^^^^^^^^^^^^^^^
+Version control for your content
+http://code.google.com/p/django-reversion/
 
 sorl-thumbnail
 ^^^^^^^^^^^^^^
-
+Image resizing on the fly
+http://code.google.com/p/sorl-thumbnail/
 
 Components under development
 ----------------------------
@@ -93,9 +98,32 @@ Django hooks for Yahoo! BOSS and Google site search
 
 glamkit-assets
 ^^^^^^^^^^^^^^
+Re-usable, uploadable media assets (images, video, audio), with metadata
 
 glamkit-importance
 ^^^^^^^^^^^^^^^^^^
+Content ranking system. Flexible, powerful, 'featured content' management
 
 glamkit-publishing
 ^^^^^^^^^^^^^^^^^^
+Draft, published, removed modes for content. Time-based publishing
+
+glamkit-favourites
+^^^^^^^^^^^^^^^^^^
+Allow users to collect their favourite objects
+
+glamkit-audiotours
+^^^^^^^^^^^^^^^^^^
+The name says it all
+
+glamkit-releases
+^^^^^^^^^^^^^^^^
+Media releases
+
+glamkit-exhibitions
+^^^^^^^^^^^^^^^^^^^
+Tools to display exhibition info
+
+In the pipeline
+---------------
+Collection search and browse, multilingual publishing tools, mailing lists and newsletters, contact forms, surveys etc.
