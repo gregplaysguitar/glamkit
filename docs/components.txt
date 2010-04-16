@@ -2,26 +2,100 @@
 GLAMkit Components
 ==================
 
+
+
 Essentials
 ----------
 
 glamkit
 ^^^^^^^
-This is the 'core' application, which contains code elements that are used by multiple GLAMkit components, as well as commands that can be used to install and integrate GLAMkit components, as well as the documentation. Source: http://github.com/glamkit/glamkit
+This is the 'core' application, which contains code elements that are used by multiple GLAMkit components, as well as commands that can be used to install and integrate GLAMkit components, as well as the documentation.
+
+`Source <http://github.com/glamkit/glamkit>`_
 
 glamkit-demo
 ^^^^^^^^^^^^
-An example project that makes use of most of the features of the GLAMkit framework. This is a good starting point to explore the functionality. Source: http://github.com/glamkit/glamkit-blogtools
+An example project that makes use of most of the features of the GLAMkit framework. This is a good starting point to explore the functionality, and get a feel for the GLAMkit code flavour. 
 
-Content App Tools
+`Source <http://github.com/glamkit/glamkit-blogtools>`_ 
+
+
+
+Content app tools
 -----------------
 
 glamkit-blogtools
 ^^^^^^^^^^^^^^^^^
+Awaiting input from JP.
+
+`Source <http://github.com/glamkit/glamkit-blogtools>`_ |
+:doc:`Documentation <blogtools/index>`
+
 
 glamkit-commenttools
 ^^^^^^^^^^^^^^^^^^^^
+Superior moderation tools, email notification and starter templates. Source: http://github.com/glamkit/comment-blogtools
+
+`Source <http://github.com/glamkit/glamkit-commenttools>`_ |
+:doc:`Documentation <commenttools/index>`
 
 glamkit-eventtools
 ^^^^^^^^^^^^^^^^^^
+Public event management tools for your institution. Create an event model that subclasses EventBase, and you get sophisticated scheduling and repetition tools for free. Source: http://github.com/glamkit/glamkit-eventtools
 
+`Source <http://github.com/glamkit/glamkit-eventtools>`_ |
+:doc:`Documentation <eventtools/index>`
+
+
+Utility apps
+------------
+
+glamkit-holdingpage
+^^^^^^^^^^^^^^^^^^^
+A configurable holding page for pre-launch or maintenance downtime. 
+
+`Source <http://github.com/glamkit/glamkit-holdingpage>`_ |
+:doc:`Documentation <holdingpage/index>`
+
+glamkit-performance
+^^^^^^^^^^^^^^^^^^^
+Apps to make your website go faster. 
+
+`Source <http://github.com/glamkit/glamkit-performance`>_ |
+:doc:`Documentation <performance/index>`
+
+glamkit-stopspam
+^^^^^^^^^^^^^^^^
+Hook `Akismet <http://akismet.com/>`_ into your commenting system. Source: http://github.com/glamkit/glamkit-performance
+
+
+
+Endorsed apps
+-------------
+.. note:: These are apps that exist outside the GLAMkit project, but work well in the GLAMkit ecosystem.
+
+FeinCMS
+^^^^^^^
+
+django-reversion
+^^^^^^^^^^^^^^^^
+
+sorl-thumbnail
+^^^^^^^^^^^^^^
+
+
+Components under development
+----------------------------
+
+glamkit-sitesearch
+^^^^^^^^^^^^^^^^^^
+Django hooks for Yahoo! BOSS and Google site search
+
+glamkit-assets
+^^^^^^^^^^^^^^
+
+glamkit-importance
+^^^^^^^^^^^^^^^^^^
+
+glamkit-publishing
+^^^^^^^^^^^^^^^^^^

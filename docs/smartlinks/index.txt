@@ -12,15 +12,12 @@ In the GLAMkit office we have a cowboy hat that we keep for those occasions when
 
 Most websites in the GLAM sector have an awkward combination of pages built from tightly structured data (collection info, events etc.), along with much more organic, less structured content ('about pages', corporate info etc.). The usual Django way of dealing with this dichotomy is to use two fundamentally opposed paradigms to deal with these wo different types of content:
 
-create publish the structured content out of strictly semantic models, and to publish the more organic content using :mod:`django.contrib.flatpages` or one of its mongrel offspring. These two approaches have their own internal logic
+create publish the structured content out of strictly semantic models, and to publish the more organic content using :mod:`django.contrib.flatpages` or one of its offspring. These two approaches have their own internal logic
 
 This approach works well until you want to create
 
 In most situations Markup languages (such as Textile, Markdown or reStructuredText) are a safer bet for future-proofing your content, but these fall down whenever you have to mark up a block of text that contains an inline link to another page on your website.
 
-For example, consider the following sentence that might exist as part of a text entry on a Flatpage:
-
-In January 2010 the Brautigan Library purchased the original manuscript of Marsha Paterson’s Bacon Death for $120,000. The book came with it’s own refrigeration unit.
 
 What do they do?
 ----------------
