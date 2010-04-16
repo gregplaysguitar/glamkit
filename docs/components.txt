@@ -34,14 +34,14 @@ A tool for quickly creating customised blog apps.
 
 glamkit-commenttools
 ^^^^^^^^^^^^^^^^^^^^
-Superior moderation tools, email notification and starter templates. Source: http://github.com/glamkit/comment-blogtools
+Superior moderation tools, email notification and starter templates.
 
 `Source <http://github.com/glamkit/glamkit-commenttools>`_ |
 :doc:`Documentation <commenttools/index>`
 
 glamkit-eventtools
 ^^^^^^^^^^^^^^^^^^
-Public event management tools for your institution. Create an event model that subclasses EventBase, and you get sophisticated scheduling and repetition tools for free. Source: http://github.com/glamkit/glamkit-eventtools
+Public event management tools for your institution. Create an event model that subclasses EventBase, and you get sophisticated scheduling and repetition tools for free.
 
 `Source <http://github.com/glamkit/glamkit-eventtools>`_ |
 :doc:`Documentation <eventtools/index>`
@@ -66,7 +66,9 @@ Apps to make your website go faster.
 
 glamkit-stopspam
 ^^^^^^^^^^^^^^^^
-Hook `Akismet <http://akismet.com/>`_ into your commenting system. Source: http://github.com/glamkit/glamkit-performance
+Hook `Akismet <http://akismet.com/>`_ into your commenting system. 
+
+`Source <http://github.com/glamkit/glamkit-performance>`_
 
 
 
