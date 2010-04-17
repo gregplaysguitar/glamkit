@@ -12,7 +12,7 @@ It's not just a grab bag of useful plug-and-play Django apps (although it comes 
 
 GLAMkit is currently in alpha development - sign up `here <http://groups.google.com/group/glamkit-announce>`_ to receive announcements about progress. We are still in the process of generalising existing code - so you can expect GLAMkit to grow very quickly over the next few weeks as we plunder our storehouse of code, which represents years of experience and hundreds of hours designing and building GLAM-specific sites. We'd love you to join in on `Github <http://github.com/glamkit>`_ or the `mailing list <http://http://groups.google.com/group/glamkit-developers>`_.
 
-However, we should stress that it *is* alpha code. There are still some holes, but there are already several production-ready components that could save a lot of development time, particularly if you're already an experienced Django developer.
+However, we should stress that it *is* alpha code. There are still some holes, but there are already several production-ready components that could save a lot of development time, particularly if you're already an experienced Django developer. Already, GLAMkit components are be used in high-traffic production environments at `Australian Screen <http://aso.gov.au/>`_ and `The Archibald Prize <http://thearchibaldprize.com.au>`_.
 
 Documentation
 =============
